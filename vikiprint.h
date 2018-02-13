@@ -76,10 +76,6 @@ public:
 private:
     char* ConvertTo866(QString str);
     QByteArray constConvertTo866(QString str);
-
-
-//C# TO C++ CONVERTER WARNING: Unlike C#, there is no automatic call to this finalizer method in native C++:
-    void Finalize();
 };
 
 #endif // VIKIPRINT_H
