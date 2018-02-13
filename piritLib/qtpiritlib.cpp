@@ -10,7 +10,7 @@
 qConnector* qConnector::sefl = nullptr;
 
 template <typename T>
-T qConnector::sendRequest(byte commandId, sData* data, uint /*holdTime*/, bool isSimple)
+T qConnector::sendRequest(byte commandId, sData* data, bool isSimple)
 {
     if (packetId < 0x40 || packetId > 0x80)
         packetId = 0x40;
@@ -114,9 +114,7 @@ void qConnector::commandStart()
     //    return;
     //}
 
-    s_commandStart* scm = new s_commandStart();
-    scm->date = QDate::currentDate().toString("ddMMyy").toStdString().c_str();
-    scm->time = QTime::currentTime().toString("hhmmss").toStdString().c_str();
+    s_commandStart* scm = new s_commandStart(QDate::currentDate().toString("ddMMyy").toStdString().c_str(), QTime::currentTime().toString("hhmmss").toStdString().c_str());
     sendRequest<void>(0x10, scm);
 }
 
