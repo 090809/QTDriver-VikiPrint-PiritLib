@@ -1,7 +1,5 @@
 #include "fiscal.h"
-#include "registry.h"
 #include "vikiprint.h"
-#include "atol.h"
 #include "fiscalconfig.h"
 
 Fiscal* FiscalFactory::fiscal = nullptr;
