@@ -1,4 +1,4 @@
-# QTDriver-VikiPrint-PiritLib
+# QtDriver VikiPrint (PiritLib)
 Драйвер для VikiPrint (PiritLib) написанный на Qt 5.
 Драйвер тестировался как на Windows 10, так и на Ubuntu 14.04 (Desktop), Ubuntu 16.04 (Desktop)
 
