@@ -14,10 +14,7 @@ VikiPrint::VikiPrint(QString setPortName, int setPortSpeed)
     taxNumber = static_cast<unsigned char>(1);
     qDebug() << "pName -" << portName << ", pSpeed -" << portSpeed;
     int result = openPort(portName, portSpeed);
-\
-    //libFiscalization(ConvertTo866(QString::number(32323)), ConvertTo866("008212"), ConvertTo866("1234567890"), ConvertTo866(QString::number(32323)));
-    //libWriteSettingsTable(30, 0, ConvertTo866("Игрушки дисней"));
-    //libWriteSettingsTable(31, 2, ConvertTo866("Королева 26"));
+        
     qDebug() << "Result: " << result;
     if (!result)
         qWarning() << "Порт не открыт!";
@@ -179,10 +176,4 @@ char* VikiPrint::ConvertTo866(QString str)
 void VikiPrint::PrintBarcode(QString barcode, int type)
 {
     libPrintBarCode(0, 8, 50, type, constConvertTo866(barcode));
-}
-
-//C# TO C++ CONVERTER WARNING: Unlike C#, there is no automatic call to this finalizer method in native C++:
-void VikiPrint::Finalize()
-{
-    //closePort();
 }
